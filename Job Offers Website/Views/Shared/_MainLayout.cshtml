@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@Page.Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">
+                    <img src="#" />
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-home"></i>
+                            الرئيسية
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-folder-open"></i>
+                            اصناف العروض
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                            حول الموقع
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+
+                <!--Partial Login-->
+                 @Html.Partial("_Login")
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+    
+
+    <!--Footer-->
+    <footer class="myfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                        من نحن ؟
+                    </h3>
+                    <p>
+                        موقع للبحث عن وظيفه
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-globe"></i>
+                        روابط مهمه
+                    </h3>
+                    <ul>
+                        <li><a href="#">وظائف للقطاع العام</a></li>
+                        <li><a href="#">وظائف للقطاع الخاص</a></li>
+                        <li><a href="#">وظائف خارج البلاد</a></li>
+                        <li><a href="#">وظائف متنوعه</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        تواصل معنا
+                    </h3>
+                    <ul>
+                        <li><a href="#">صفحتنا على الفيسبوك</a></li>
+                        <li><a href="#">تابعنا على تويتر</a></li>
+                        <li><a href="#">شاهدنا على اليوتيوب</a></li>
+                        <li><a href="#">اترك لنا رساله</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <span>جميع الحقوق محفوظه لموقع التوظيف -2022</span>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
